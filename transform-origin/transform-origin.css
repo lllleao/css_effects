@@ -2,14 +2,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover img {
+        transform: rotateY(0deg);
+
+    }
     /* perspective: 1000px; */
     img {
         margin-top: 80px;
         width: 350px;
-        transition: transform .5s ease;
+        transition: transform 2s ease;
+        transform-origin: bottom;
+        transform: rotateX(360deg);
 
         &:hover {
-            transform: rotateY(90deg);
+            transform: rotateY(0deg);
+
         }
     }
 }
