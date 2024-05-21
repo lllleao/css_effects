@@ -20,14 +20,32 @@ body{
 .button {
     padding: 20px 40px;
     font-size: 18px;
-    background-color: #fff;
+    background-color: transparent;
     cursor: pointer;
     position: relative;
-    border: 2px solid #fff;
+    border: 2px solid tomato;
     overflow: hidden;
-    color: #000;
+    color: tomato;
+    transition: color 1s;
 }
 
 .button::before {
-    
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    border-radius: 0 0 50% 50%;
+    background-color: tomato;
+    transition: height 1s;
+    z-index: -1;
+}
+
+.button:hover::before {
+    height: 190%;
+}
+
+.button:hover {
+    color: #fff;
 }
