@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    padding: 20px 40px;
+    font-size: 18px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid black;
+    overflow: hidden;
+    transition: all 1s;
+    letter-spacing: -2px;
+    
+    &:hover {
+        border: 7px solid black;
+        font-weight: 900;
+        letter-spacing: 10px;
+    }
+}
+

@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    padding: 20px 40px;
+    font-size: 18px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid black;
+    overflow: hidden;
+    
+    &:hover::before {
+        transform: rotate(0)
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgb(238, 238, 90);
+        z-index: -1;
+        transform-origin: bottom left;
+        transform: rotate(-90deg);
+        transition: transform .5s ease;
+    }
+}
+

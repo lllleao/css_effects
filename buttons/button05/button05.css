@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body{
+    background-color: #222;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    padding: 20px 40px;
+    font-size: 18px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #fff;
+    overflow: hidden;
+    color: #fff;
+    transition: background-color .5s;
+
+
+    &:hover::before {
+        transform: translateX(100%) rotate(45deg);
+    }
+
+    &:hover {
+        background-color: #F44336;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background-color: #fff;
+        transform: translateX(-100%) rotate(45deg);
+        transition: transform .5s;
+
+    }
+}
+
